@@ -1,0 +1,1 @@
+sudo apt install curl libcurl4-openssl-dev
