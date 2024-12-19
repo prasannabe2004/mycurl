@@ -67,18 +67,18 @@ bool download(const std::string& url, const std::string& file_path)
     indicators::show_console_cursor(false);
 
     indicators::ProgressBar progress_bar{
-        indicators::option::BarWidth{30},
+    indicators::option::BarWidth{30},
 	indicators::option::Start{" ["},
 	indicators::option::Fill{"="},
 	indicators::option::Lead{">"},
-        indicators::option::Remainder{" "},
+    indicators::option::Remainder{" "},
 	indicators::option::End{"]"},
-        indicators::option::PrefixText{file_name},
+    indicators::option::PrefixText{file_name},
 	indicators::option::PostfixText{"Downloading"},
-        indicators::option::ForegroundColor{indicators::Color::green},
-        indicators::option::ShowElapsedTime{true},
-        indicators::option::ShowRemainingTime{true},
-        indicators::option::FontStyles{ std::vector<indicators::FontStyle>{indicators::FontStyle::bold}}
+    indicators::option::ForegroundColor{indicators::Color::green},
+    indicators::option::ShowElapsedTime{true},
+    indicators::option::ShowRemainingTime{true},
+    indicators::option::FontStyles{ std::vector<indicators::FontStyle>{indicators::FontStyle::bold}}
     };
 
     CURL* curl;
